@@ -1,19 +1,37 @@
 doctype html
 html 
     head 
-         title= `Update Custom Object Form | Integrating With HubSpot I Practicum`
-         meta(name="viewport" content="width=device-width, initial-scale=1")
-         link(rel="stylesheet", href="/css/style.css")
-     body    
+        title Update Custom Object Form | Integrating With HubSpot I Practicum
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+        style.
+            body{
+                font-family: Arial, sans-serif;
+            }
+            .form-container {
+                background-color: #aaaaa;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                margin-left: 20px;
+                margin-top: 40px;
+                width: 50%;
+            }
+          
+        
+    body 
         div.content
-        h1 New People form
-        div.form-container
-            form(action="/update-cobj" method="post")
-            label(for="name") Pet name
-            input(type="text" name="name")
-            label(for="nationality") Pet type
-            input(type="text" name="nationality")
-            label(for="age") Food preference
-            input(type="text" name="age")
-            button(type="submit") Add New Person
+            h1 New People Form
+            div.form-container
+                form(action="/update-cobj" method="post")
+                    label(for="name") Person name
+                    input(type="text" name="name")
+
+                    label(for="nationality") Nationality
+                    input(type="text" name="nationality")
+
+                    label(for="age") Age
+                    input(type="text" name="age")
+
+                    button(type="submit") Add New Person
+
             a(href="/") Return to the homepage
