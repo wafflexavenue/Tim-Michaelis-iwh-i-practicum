@@ -1,14 +1,19 @@
-
-- doctype html
+doctype html
 html 
     head 
-         title= `${title}`
+         title= `Update Custom Object Form | Integrating With HubSpot I Practicum`
          meta(name="viewport" content="width=device-width, initial-scale=1")
          link(rel="stylesheet", href="/css/style.css")
      body    
-         h1 Contacts
-         .cards 
-             each contact in data
-                 .card 
-                     h2.card__name #{contact.properties.firstname}  #{contact.properties.lastname}
-                     p.card__email #{contact.properties.email}
+        div.content
+        h1 New People form
+        div.form-container
+            form(action="/update-cobj" method="post")
+            label(for="name") Pet name
+            input(type="text" name="name")
+            label(for="nationality") Pet type
+            input(type="text" name="nationality")
+            label(for="age") Food preference
+            input(type="text" name="age")
+            button(type="submit") Add New Person
+            a(href="/") Return to the homepage
