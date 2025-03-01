@@ -5,18 +5,58 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/css/style.css")
         style.
-            body{
+            body {
                 font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #f5f5f5;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 40px;
             }
             .form-container {
-                background-color: #aaaaa;
+                background-color: #ffffff;
                 border-radius: 10px;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                margin-left: 20px;
-                margin-top: 40px;
+                padding: 20px;
                 width: 50%;
+                border: 1px solid black;
+                text-align: left;
             }
-          
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+            label {
+                font-weight: bold;
+                margin-top: 10px;
+            }
+            input {
+                padding: 8px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            button {
+                margin-top: 15px;
+                padding: 10px;
+                background-color: red;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            button:hover {
+                background-color: darkred;
+            }
+            a {
+                display: block;
+                margin-top: 20px;
+                text-decoration: none;
+                color: blue;
+            }
         
     body 
         div.content
@@ -30,8 +70,8 @@ html
                     input(type="text" name="nationality")
 
                     label(for="age") Age
-                    input(type="text" name="age")
+                    input(type="number" name="age")
 
                     button(type="submit") Add New Person
 
-            a(href="/") Return to the homepage2
+            a(href="/") Return to the homepage
